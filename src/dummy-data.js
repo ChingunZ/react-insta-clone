@@ -7,6 +7,7 @@ const dummyData = [
     imageUrl:
       "https://images.unsplash.com/photo-1477763858572-cda7deaa9bc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1876&q=80",
     likes: 400,
+    dislikes: 50,
     timestamp: "July 17th 2017, 12:42:40 pm",
     comments: [
       {
@@ -34,6 +35,7 @@ const dummyData = [
     imageUrl:
       "https://images.unsplash.com/photo-1566577134770-3d85bb3a9cc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3750&q=80",
     likes: 4307,
+    dislikes: 50,
     timestamp: "July 15th 2017, 03:12:09 pm",
     comments: [
       {
@@ -66,6 +68,7 @@ const dummyData = [
     imageUrl:
       "https://images.unsplash.com/photo-1591994843349-f415893b3a6b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
     likes: 4307,
+    dislikes: 50,
     timestamp: "July 15th 2017, 03:12:09 pm",
     comments: [
       {
@@ -98,6 +101,7 @@ const dummyData = [
     imageUrl:
       "https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80",
     likes: 4307,
+    dislikes: 50,
     timestamp: "July 15th 2017, 03:12:09 pm",
     comments: [
       {
@@ -130,6 +134,7 @@ const dummyData = [
     imageUrl:
       "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80",
     likes: 4307,
+    dislikes: 50,
     timestamp: "July 15th 2017, 03:12:09 pm",
     comments: [
       {

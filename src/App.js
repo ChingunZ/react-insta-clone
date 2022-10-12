@@ -15,11 +15,20 @@ import SearchBarData from "./components/SearchBar/SearchBar";
 
 const App = () => {
   // Create a state called `posts` to hold the array of post objects, **initializing to dummyData**.
+  const [posts, setPosts] = useState(dummyData);
   // This state is the source of truth for the data inside the app. You won't be needing dummyData anymore.
   // To make the search bar work (which is stretch) we'd need another state to hold the search term.
-
+  const [searchBar, setSearchBar] = useState();
   const likePost = (postId) => {
-    /*
+    console.log(postId);
+    setPosts(
+      posts.map((post) => {
+        if (post.id === postId) {
+          return { ...post, likes: post.likes + 1 };
+        }
+        return post;
+      })
+      /* 
       This function serves the purpose of increasing the number of likes by one, of the post with a given id.
 
       The state of the app lives at the top of the React tree, but it wouldn't be fair for nested components not to be able to change state!
@@ -30,12 +39,36 @@ const App = () => {
         - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
         - otherwise just return the post object unchanged.
      */
+    );
+  };
+  const dislikePost = (postId) => {
+    console.log(postId);
+    setPosts(
+      posts.map((post) => {
+        if (post.id === postId) {
+          return { ...post, dislikes: post.dislikes + 1 };
+        }
+        return post;
+      })
+      /* 
+      This function serves the purpose of increasing the number of likes by one, of the post with a given id.
+
+      The state of the app lives at the top of the React tree, but it wouldn't be fair for nested components not to be able to change state!
+      This function is passed down to nested components through props, allowing them to increase the number of likes of a given post.
+
+      Invoke `setPosts` and pass as the new state the invocation of `posts.map`.
+      The callback passed into `map` performs the following logic:
+        - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
+        - otherwise just return the post object unchanged.
+     */
+    );
   };
 
   return (
     <div className="App">
       {/* Add SearchBar and Posts here to render them */}
-      <h1>Hello it is running Brothers</h1>
+      <SearchBarData />
+      <PostsData likePost={likePost} dislikePost={dislikePost} posts={posts} />
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );
